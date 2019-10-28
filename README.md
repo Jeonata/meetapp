@@ -98,7 +98,7 @@ Tendo instalado, clone o projeto com o seguinte código:
 
     $ yarn sequelize db:migrate
 
-##### 4 - Executar o back-end
+##### 5 - Executar o back-end
 
     $ yarn dev
     
