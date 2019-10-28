@@ -132,4 +132,5 @@ Tendo instalado, clone o projeto com o seguinte código:
     $ react-native run-android
 
 
-    
+## License
+[MIT](https://github.com/Jeonata/Meetapp/blob/master/LICENSE)
