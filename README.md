@@ -12,7 +12,7 @@ Uma aplicação completa criada utilizando a poderosa *Stack* [JavaScript](https
 ## Tecnologias utilizadas
 
 ### Aplicação servidor (back-end)
--   [Node.js](https://nodejs.org/en/](https://nodejs.org/)
+-   [Node.js](https://nodejs.org/)
 -   [Express](https://expressjs.com/)
 -   [nodemon](https://nodemon.io/)
 -   [Sucrase](https://github.com/alangpierce/sucrase)
