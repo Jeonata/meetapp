@@ -12,7 +12,7 @@ Uma aplicação completa criada utilizando a poderosa *Stack* [JavaScript](https
 ## Tecnologias utilizadas
 
 ### Aplicação servidor (back-end)
--   [Node.js](https://nodejs.org/en/](https://nodejs.org/))
+-   [Node.js](https://nodejs.org/en/](https://nodejs.org/)
 -   [Express](https://expressjs.com/)
 -   [nodemon](https://nodemon.io/)
 -   [Sucrase](https://github.com/alangpierce/sucrase)
@@ -31,7 +31,8 @@ Uma aplicação completa criada utilizando a poderosa *Stack* [JavaScript](https
 -   [Date-fns](https://date-fns.org/)
 -   [Sentry](https://sentry.io/)
 -   [DotEnv](https://www.npmjs.com/package/dotenv)
--   [VS Code](https://code.visualstudio.com/) with [ESLint]([https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint))
+-   [VS Code](https://code.visualstudio.com/) 
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ###  Aplicação web (front-end)
 -   [ReactJS](https://reactjs.org/)
@@ -50,7 +51,8 @@ Uma aplicação completa criada utilizando a poderosa *Stack* [JavaScript](https
 -   [Yup](https://www.npmjs.com/package/yup)
 -   [Date-fns](https://date-fns.org/)
 -   [Reactotron](https://infinite.red/reactotron)
--   [VS Code](https://code.visualstudio.com/) with [ESLint]([https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint))
+-   [VS Code](https://code.visualstudio.com/)
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ### Aplicação mobile (front-end - mobile)
 -   [ReactJS](https://reactjs.org/)
@@ -62,7 +64,8 @@ Uma aplicação completa criada utilizando a poderosa *Stack* [JavaScript](https
 -   [React-Icons](http://react-icons.github.io/react-icons/)
 -   [date-fns](https://date-fns.org/)
 -   [Reactotron](https://infinite.red/reactotron)
--   [VS Code](https://code.visualstudio.com/) with [ESLint]([https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint))
+-   [VS Code](https://code.visualstudio.com/)
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## Rodando a aplicação
 
@@ -74,7 +77,9 @@ Tendo instalado, clone o projeto com o seguinte código:
 
     $ git clone https://github.com/Jeonata/Meetapp.git
 
-#### Instalação do back-end
+
+### Instalação do back-end
+
 
 ##### 1 - Abra o repositório do back-end:
 
@@ -87,7 +92,7 @@ Tendo instalado, clone o projeto com o seguinte código:
 ##### 3 - Monte os ambientes do Docker
 
     $  docker run --name database -e POSTGRES_PASSWORD=yoursecretpassword -e POSTGRES_DB=meetapp -p 5432:5432 -d postgres
-    $  docker run --name redismeetapp -p 6379:6379 -d -t redis:alpine
+    $  docker run --name redis -p 6379:6379 -d -t redis:alpine
     
 ##### 4 - Executar as migrations
 
@@ -97,7 +102,9 @@ Tendo instalado, clone o projeto com o seguinte código:
 
     $ yarn dev
     
-#### Instalação do front-end
+
+### Instalação do front-end
+
 
 ##### 1 - Abra o repositório do back-end:
 
@@ -111,8 +118,8 @@ Tendo instalado, clone o projeto com o seguinte código:
 
     $ yarn start
 
-#### Instalação do mobile
 
+### Instalação do mobile
 
 
 > Até o momento, a aplicação foi feita e testada em um dispositivo Android. A compatibilidade com dispositivos IOS não é garantida.
