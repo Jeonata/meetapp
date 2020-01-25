@@ -69,19 +69,23 @@ Uma aplicação completa criada utilizando a poderosa *Stack* [JavaScript](https
 
 ## Rodando a aplicação
 
- Para iniciar, será necessário que você tenha instalado algum gerenciador de pacotes Git, o Node ( versão 10.15 +) e Yarn  ( versão 1.15 +).
+ Para iniciar, será necessário que você tenha instalado algum gerenciador de pacotes Git, o Node ( versão 10.15 +) e Yarn  ( versão 1.15 +). 
 
-Para utilizar o aplicativo, é necessário algun emulador Android instalado, ou um dispositivo com acesso de desenvolvedor.
+É importante possuir algum banco local Postgres ou o Docker instalado para o funcionamento do back-end.
+
+Para utilizar o aplicativo, é necessário algum [emulador Android](https://developer.android.com/studio/) instalado, ou um dispositivo com acesso de desenvolvedor. Não esqueça de configurar as variáveis de ambiente de do JDK e do SDK.Também é importante ter o [React Native](https://facebook.github.io/react-native/docs/getting-started/) instalados globalmente.
  
-Tendo instalado, clone o projeto com o seguinte código:
+Após a instalação das ferramentas necessárias, baixe o projeto ou clone com o seguinte código:
 
     $ git clone https://github.com/Jeonata/Meetapp.git
+
+##Para rodar o código prossiga com as instalações:
 
 
 ### Instalação do back-end
 
 
-##### 1 - Abra o repositório do back-end:
+##### 1 - Abra o repositório do back-end
 
     $ cd Meetapp/meetapp-backend 
  
@@ -89,16 +93,18 @@ Tendo instalado, clone o projeto com o seguinte código:
 
     $ yarn install
     
-##### 3 - Monte os ambientes do Docker
+##### 3 - Caso já possua algum ambiente de banco com Postgres, crie um banco chamado meetapp. Caso contrário, monte os ambientes utilizando o Docker. Utilize o Redis para o funcionamento do envio de e-mail.
 
     $  docker run --name database -e POSTGRES_PASSWORD=yoursecretpassword -e POSTGRES_DB=meetapp -p 5432:5432 -d postgres
     $  docker run --name redis -p 6379:6379 -d -t redis:alpine
     
-##### 4 - Executar as migrations
+##### 5 - Altere o .env com os dados de acesso, conforme o exemplo do .env.example
+
+##### 6 - Executar as migrations
 
     $ yarn sequelize db:migrate
 
-##### 5 - Executar o back-end
+##### 7 - Executar o back-end
 
     $ yarn dev
     
@@ -106,9 +112,9 @@ Tendo instalado, clone o projeto com o seguinte código:
 ### Instalação do front-end
 
 
-##### 1 - Abra o repositório do back-end:
+##### 1 - Abra o repositório do front-end
 
-    $ cd Meetapp/meetapp-frontend 
+    $ cd Meetapp/meetapp-web
  
 ##### 2 - Instale as dependências
 
@@ -125,7 +131,7 @@ Tendo instalado, clone o projeto com o seguinte código:
 > Até o momento, a aplicação foi feita e testada em um dispositivo Android. A compatibilidade com dispositivos IOS não é garantida.
 
 
-##### 1 - Abra o repositório do mobile:
+##### 1 - Abra o repositório do mobile
 
     $ cd Meetapp/mobile 
  
@@ -133,7 +139,13 @@ Tendo instalado, clone o projeto com o seguinte código:
 
     $ yarn install
 
-##### 3 - Executar a aplicação
+##### 3 - Altere o URL base do axios (Meetapp/mobile/src/services/api.js)  para o endereço de ip local conforme o exemplo a seguir
+
+	const api = axios.create({
+		baseURL: 'http://192.168.100.6:3333',
+	});
+
+##### 4 - Executar a aplicação
 
     $ npm start
     $ react-native run-android
@@ -141,3 +153,4 @@ Tendo instalado, clone o projeto com o seguinte código:
 
 ## License
 [MIT](https://github.com/Jeonata/Meetapp/blob/master/LICENSE)
+
